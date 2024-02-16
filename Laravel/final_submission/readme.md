@@ -1,28 +1,28 @@
 # API Documentation
-## 💁‍♀️ Allowed HTTP request
+## Allowed HTTP request
 - GET : To GET data from the API
 - POST    : To send POST request to the API (Create data)
 - PUT     : To send PUT request to the API (Update data)
 - DELETE  : To delete data on the API 
-## 📝 Description Of Usual Server Responses
+## Description Of Usual Server Responses
 - 200 `OK` - Request was successful
 - 404 `Not Found` - Requested data was not found
-- 405 `Method Not Allowed` - 
-## 📚 Drugs Attributes
+- 405 `Method Not Allowed` - isn't allowed for that specific resource, or URL. 
+## Drugs Attributes
 - id `BIGINT` : Unique identifier (Primary Key)
 - name `varchar` : Drug name
 - description `varchar` : Drug description
 - supplier_id `BIGINT` : Supplier id (Foreign Key)
-## ✍ Suppliers Attributes
+## Suppliers Attributes
 - id `BIGINT` : Unique identifier ( Primary Key )
 - name `varchar` : Supplier name
 - address `varchar` : Supplier address
-## ✍ Sales Attributes
+## Sales Attributes
 - id `BIGINT` : Unique identifier ( Primary Key )
 - drug_id `BIGINT` : Drug id
 - quantity `int` : Drag quantity
 - total_price `decimal` Drug total price
-## 🔖 GET Method Example
+## GET Method Example
 ### Getting all data
 #### Drug URL : 
 ```
@@ -183,7 +183,7 @@ http://localhost:8000/api/sales/{id}
     "updated_at": "2024-02-16T03:33:49.000000Z"
 }
 ```
-## 🧾 POST Method Example
+## POST Method Example
 ### Drug Example
 #### URL :
 ```
@@ -222,7 +222,7 @@ http://localhost:8000/api/sales
     "total_price": "500,00"
 }
 ```
-## ✍ PUT Method Example
+## PUT Method Example
 ### Drug Example
 #### URL :
 ```
@@ -261,7 +261,7 @@ http://localhost:8000/api/sales/{id}
     "total_price": "500,00"
 }
 ```
-## ❌ DELETE Method Example
+## DELETE Method Example
 ### Drug
 #### URL :
 ```
@@ -278,4 +278,4 @@ http://localhost:8000/api/suppliers/{id}
 http://localhost:8000/api/sales/{id}
 ```
 ## 🤯 Entity Relational Diagram ( ERD )
-![image](https://github.com/urfavteddybear/Final-Submission-IDC/assets/97431620/0aa2de4c-7850-4ba9-8295-a64bd821a837)
+![image](https://github.com/ardane-s/idc-back-end/blob/aca531b8c7c1fd3fae265aea1af8e8ba68a4b3fc/Laravel/final_submission/erd.png)
